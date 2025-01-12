@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Rafting Adventure offers thrilling and safe rafting experiences. Explore our exciting trips and book your adventure today!">
+    <meta name="author" content="Luis">
+    <link rel="stylesheet" href="styles/rafting.css">
+    <title>Home - Rafting Adventure</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <img src="images/logo.png" alt="Rafting Adventure Logo">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="trips.html">Trips</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <img src="images/hero-image.jpg" alt="Rafting Adventure" class="hero-img">
+            <div class="hero-text">
+                <h1>Ready for the Adventure?</h1>
+            </div>
+        </section>
+
+        <!-- Newsletter Subscription -->
+        <section class="newsletter">
+            <h2>Subscribe to Our Newsletter</h2>
+            <form action="submit_form.php" method="POST" class="newsletter-form">
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Your Email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
+
+        <!-- Call to Action -->
+        <section class="cta">
+            <p>Ready for the adventure? <a href="trips.html" class="cta-button">Explore Our Trips</a></p>
+        </section>
+
+        <!-- Grid Layout Section -->
+        <section class="features">
+            <div class="grid-container">
+                <div class="feature-item">
+                    <img src="images/rafting1.jpg" alt="Rafting Experience">
+                    <h3>Thrilling Rafting Experience</h3>
+                    <p>Explore the wildest rapids and feel the adrenaline rush. Our expert guides ensure your safety while you enjoy the adventure.</p>
+                </div>
+                <div class="feature-item">
+                    <img src="images/rafting2.jpg" alt="Scenic Views">
+                    <h3>Scenic Views</h3>
+                    <p>Our rafting trips offer breathtaking views of nature. Paddle through picturesque rivers surrounded by lush forests and mountains.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Rafting Adventure. All rights reserved. Created by Luis</p>
+        <nav class="sociallinks">
+            <a href="https://facebook.com" title="Facebook">
+                <img src="images/facebook.svg" alt="Facebook" class="social-icon">
+            </a>
+            <a href="https://twitter.com" title="Twitter">
+                <img src="images/twitter.svg" alt="Twitter" class="social-icon">
+            </a>
+            <a href="https://instagram.com" title="Instagram">
+                <img src="images/instagram.svg" alt="Instagram" class="social-icon">
+            </a>
+        </nav>
+    </footer>
+</body>
+</html>
