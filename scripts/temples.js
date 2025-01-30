@@ -1,11 +1,10 @@
-// Set the current year and last modified date
-document.getElementById('year').textContent = new Date().getFullYear();
-document.getElementById('last-modified').textContent = document.lastModified;
+//Year anda las modified
+document.getElementById('currentyear').textContent = new Date().getFullYear();
+document.getElementById('lastModified').textContent = 'Last Modified: ' + document.lastModified;
 
-// Function to toggle the hamburger menu
-const hamburger = document.getElementById('hamburger');
-const navLinks = document.querySelector('nav ul');
-
-hamburger.addEventListener('click', () => {
-  navLinks.classList.toggle('show');
+//Menu
+document.getElementById("menu").addEventListener("click", function() {
+  let nav = document.querySelector("nav ul");
+  nav.classList.toggle("visible"); // Add the 'visible' class to toggle visibility
 });
+

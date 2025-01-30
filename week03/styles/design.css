@@ -1,0 +1,46 @@
+
+.callout {
+    padding: 20px;  /* Adjust this as needed */
+}
+
+h2 {
+    text-align: left;
+}
+
+
+.callout {
+    background-color: #702963;  /* Original background color */
+    color: #ffffff;  /* Use white text for better contrast */
+}
+
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* Two equal-width columns */
+    gap: 20px;
+}
+
+h2 {
+    grid-column: span 2;  /* Make the <h2> span both columns */
+}
+
+
+.banner {
+    background-color: #ffcc00; /* Banner color */
+    padding: 10px;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+
+@media (max-width: 768px) {
+    main {
+        grid-template-columns: 1fr;  /* Stack the columns on smaller screens */
+    }
+}
+
+footer {
+    text-align: left;
+}
+
