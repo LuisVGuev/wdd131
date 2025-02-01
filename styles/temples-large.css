@@ -5,8 +5,8 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #efddf0;
-  color: #333;
+  background-color: #dae8f5;
+  color: #000000;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,11 +54,18 @@ nav a {
   color: #7d767b;
   text-decoration: none;
   font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease; /* Combine transition properties */
 }
 
 nav a:hover {
   text-decoration: underline;
   color: #d05f71;
+  transform: scale(1.1); /* Add a scale effect */
+}
+
+nav ul.active {
+  display: block;
+  background-color: #0a2c4e;
 }
 
 /* Main Content */
@@ -92,6 +99,7 @@ figure {
 img {
   width: 100%;
   height: auto;
+  object-fit: cover;
   border-radius: 10px;
   transition: transform 0.3s ease;
 }
@@ -109,8 +117,8 @@ figcaption {
 /* Footer Section */
 footer {
   width: 100%;
-  background-color: #efddf0;
-  color: #7d767b;
+  background-color: #0a2c4e;
+  color: #fdfdfd;
   text-align: center;
   padding: 30px 0;
   position: relative;
@@ -126,7 +134,7 @@ footer #currentyear {
   font-weight: bold;
 }
 
-/* For tablets and smaller devices */
+/* For tablets and smaller devices (1024px and below) */
 @media (max-width: 1024px) {
   .temple-gallery {
     grid-template-columns: repeat(2, 1fr);
@@ -138,45 +146,48 @@ footer #currentyear {
   }
 }
 
-/* For mobile devices (up to 768px) */
+/* For mobile screens (768px and below) */
 @media (max-width: 768px) {
-  .temple-gallery {
-    grid-template-columns: 1fr;
-  }
-
+  /* Mostrar el botón de hamburguesa solo en dispositivos móviles */
   #menu {
-    display: none; /* Hide by default */
-    background-color: transparent;
+    display: block;
+    background-color: #7d767b;
     border: none;
     font-size: 2rem;
-    color: #7d767b;
+    color: #fff; /* El color debe ser blanco para resaltar */
     cursor: pointer;
-    position: absolute; /* Absolute positioning */
-    top: 15px; /* Adjust top to fit the nav bar */
-    right: 20px; /* Adjust right to fit the screen */
-    z-index: 10; /* Ensures the button is above other elements */
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 10;
+  }
+
+  /* Estilos para el ícono de hamburguesa */
+  #menu::before {
+    content: "\2630";  /* El carácter Unicode para el ícono de hamburguesa */
+    font-size: 2.5rem;
+    color: #fff;
   }
 
   nav {
-    position: relative; /* Ensures positioning context for absolute items */
-    padding: 15px; /* Adjust padding if needed */
+    position: relative;
+    padding: 15px;
   }
 
   nav ul {
-    display: none;
+    display: none; /* Ocultar el menú de navegación */
     flex-direction: column;
     align-items: center;
     width: 100%;
-    position: absolute; /* Position the menu */
-    top: 100%; /* Place below the nav bar */
+    position: absolute;
+    top: 100%;
     left: 0;
-    background-color: #efddf0;
     padding: 20px 0;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
   nav ul.active {
-    display: block;
+    display: block; /* Mostrar el menú cuando tenga la clase active */
   }
 }
 
@@ -194,7 +205,9 @@ footer #currentyear {
   }
 
   #menu {
-    display: none;
+    display: none;  /* Ocultar el botón en pantallas grandes */
   }
 }
+
+
 

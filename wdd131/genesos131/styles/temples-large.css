@@ -1,0 +1,197 @@
+/* temples-large.css - Large screen styles */
+/* General page settings for large screens */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #efddf0;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+  }
+  
+  /* Header (Title) */
+  h1 {
+    margin: 0;
+    padding: 20px;
+    font-size: 3rem;
+    font-weight: bold;
+    color: #7d767b;
+    background-color: #efddf0;
+    width: 100%;
+    text-align: left;
+  }
+  
+  /* Navigation Menu */
+  nav {
+    width: 100%;
+    background-color: #efddf0;
+    color: #7d767b;
+    padding: 15px 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  nav ul {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  nav li {
+    margin: 0 25px;
+  }
+  
+  nav a {
+    color: #7d767b;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+    color: #d05f71;
+  }
+  
+  /* Main Content */
+  main {
+    width: 100%;
+    max-width: 1200px;
+    padding: 40px;
+    background-color: #efddf0;
+    margin-top: 30px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  main h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #7d767b;
+    margin-bottom: 20px;
+  }
+  
+  /* Gallery Styling */
+  .temple-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  
+  figure {
+    text-align: center;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+  }
+  
+  img:hover {
+    transform: scale(1.05);
+  }
+  
+  figcaption {
+    margin-top: 10px;
+    font-size: 1rem;
+    color: #7d767b;
+  }
+  
+  /* Footer Section */
+  footer {
+    width: 100%;
+    background-color: #efddf0;
+    color: #7d767b;
+    text-align: center;
+    padding: 30px 0;
+    position: relative;
+    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  footer p {
+    margin: 0;
+    font-size: 1rem;
+  }
+  
+  footer #currentyear {
+    font-weight: bold;
+  }
+  
+  /* For tablets and smaller devices */
+  @media (max-width: 1024px) {
+    .temple-gallery {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    nav ul {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .temple-gallery {
+      grid-template-columns: 1fr;
+    }
+  
+    #menu {
+      display: none; 
+      background-color: #7d767b;
+      border: none;
+      font-size: 2rem;
+      color: #7d767b;
+      cursor: pointer;
+      position: absolute; 
+      top: 15px; 
+      right: 20px; 
+      z-index: 10; 
+    }
+  
+    nav {
+      position: relative; 
+      padding: 15px; 
+    }
+  
+    nav ul {
+      display: none;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      position: absolute; 
+      top: 100%;
+      left: 0;
+      background-color: #efddf0;
+      padding: 20px 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+  
+    nav ul.active {
+      display: block;
+    }
+  }
+  
+  /* For large screens (1025px and up) */
+  @media (min-width: 1025px) {
+    .temple-gallery {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  
+    nav ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    #menu {
+      display: none;
+    }
+  }
