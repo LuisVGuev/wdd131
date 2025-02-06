@@ -1,0 +1,119 @@
+/* places-large.css */
+:root {
+  --primary-color: #40962f;
+  --secondary-color: #004f15;
+  --third-color: #ffffff;
+  --text-color: #000000;
+  --images-background:  #ebebeb;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-color);
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+/* Header (Title) */
+h1 {
+  margin: 0;
+  padding: 20px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: var(--third-color);
+  background-color: var(--secondary-color);
+  width: 100%;
+  text-align: center;
+}
+
+/* Main Content */
+main {
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px;
+  background-color: #fff;
+  margin-top: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+/* Footer Section */
+footer {
+  width: 100%;
+  background-color: var(--secondary-color);
+  color: #fdfdfd;
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+footer #currentyear {
+  font-weight: bold;
+}
+
+/* For mobile screens (768px and below) */
+@media (max-width: 768px) {
+  .temple-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  footer {
+    padding: 20px 0;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+
+  /* Overlay de clima */
+  .weather-overlay {
+    position: absolute;
+    width: 90%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10; 
+    display: block; 
+    top: 120px; 
+  }
+
+  /* Overlay de datos del país */
+  .country-overlay {
+    position: absolute;
+    width: 90%;
+    padding: 15px;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 5; 
+    display: block; 
+    top: 350px; 
+  }
+}

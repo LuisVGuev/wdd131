@@ -1,0 +1,79 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Australia Place by Luis Veliz.">
+    <meta name="author" content="Luis Ramon Veliz">
+    <meta name="keywords" content="Australia Place">
+    <title>Australia - Luis Ramon Veliz</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="stylesheet" href="styles/place-large.css">
+
+    <!-- External JavaScript -->
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Welcome to Australia Place</h1>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <h2>Amazing Place</h2>
+        
+        <!-- Hero Image Container -->
+        <div class="hero-container">
+            <!-- Hero Image -->
+            <picture>
+                <!-- Mobile Image -->
+                <source srcset="images/Australia1-mobile.webp" media="(max-width: 768px)">
+                <!-- Large Screen Image -->
+                <source srcset="images/Australia2-large.webp" media="(min-width: 769px)">
+                
+                <img 
+                    src="images/Australia2-large.webp" 
+                    alt="Australia landscape"
+                    loading="lazy"
+                >
+            </picture>
+    
+            <!-- Weather Overlay -->
+            <div class="overlay weather-overlay">
+                <h3>Weather in Australia</h3>
+                <p id="city-name">Sydney</p>
+                <p id="temperature">Temperature: 15°C</p>
+                <p id="windspeed">Wind Speed: 10 km/h</p>
+                <p id="windchill">Windchill: <span id="windchill-result">N/A</span></p>
+            </div>
+            
+            <!-- Country Data Overlay -->
+            <div class="overlay country-overlay">
+                <h3>Australia Data</h3>
+                <p><strong>Area:</strong> 7,692,024 km²</p>
+                <p><strong>Population:</strong> 25.69 million</p>
+                <p><strong>Language:</strong> English</p>
+                <p><strong>Capital:</strong> Canberra</p>
+            </div>
+        </div>
+    </main>
+    
+    
+    
+
+    <!-- Footer Section -->
+    <footer aria-label="Footer section">
+        <p>&copy; <span id="currentyear"></span> Luis Ramon Veliz, Australia</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
