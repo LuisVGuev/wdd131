@@ -1,0 +1,212 @@
+/* temples-large.css - Large screen styles */
+/* General page settings for large screens */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #dae8f5;
+  color: #000000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+}
+
+/* Header (Title) */
+h1 {
+  margin: 0;
+  padding: 20px;
+  font-size: 3rem;
+  font-weight: bold;
+  color: #7d767b;
+  background-color: #efddf0;
+  width: 100%;
+  text-align: left;
+}
+
+/* Navigation Menu */
+nav {
+  width: 100%;
+  background-color: #efddf0;
+  color: #7d767b;
+  padding: 15px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-start;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav li {
+  margin: 0 25px;
+}
+
+nav a {
+  color: #7d767b;
+  text-decoration: none;
+  font-size: 1.2rem;
+  transition: color 0.3s ease, transform 0.3s ease; /* Combine transition properties */
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #d05f71;
+  transform: scale(1.1); /* Add a scale effect */
+}
+
+nav ul.active {
+  display: block;
+  background-color: #0a2c4e;
+}
+
+/* Main Content */
+main {
+  width: 100%;
+  max-width: 1200px;
+  padding: 40px;
+  background-color: #efddf0;
+  margin-top: 30px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+main h2 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #7d767b;
+  margin-bottom: 20px;
+}
+
+/* Gallery Styling */
+.temple-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+figure {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05);
+}
+
+figcaption {
+  margin-top: 10px;
+  font-size: 1rem;
+  color: #7d767b;
+}
+
+/* Footer Section */
+footer {
+  width: 100%;
+  background-color: #0a2c4e;
+  color: #fdfdfd;
+  text-align: center;
+  padding: 30px 0;
+  position: relative;
+  box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+}
+
+footer #currentyear {
+  font-weight: bold;
+}
+
+/* For tablets and smaller devices (1024px and below) */
+@media (max-width: 1024px) {
+  .temple-gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* For mobile screens (768px and below) */
+@media (max-width: 768px) {
+  /* Mostrar el botón de hamburguesa solo en dispositivos móviles */
+  #menu {
+    display: block;
+    background-color: #7d767b;
+    border: none;
+    font-size: 2rem;
+    color: #fff; /* El color debe ser blanco para resaltar */
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    z-index: 10;
+  }
+
+  /* Estilos para el ícono de hamburguesa */
+  #menu::before {
+    content: "\2630";  /* El carácter Unicode para el ícono de hamburguesa */
+    font-size: 2.5rem;
+    color: #fff;
+  }
+
+  nav {
+    position: relative;
+    padding: 15px;
+  }
+
+  nav ul {
+    display: none; /* Ocultar el menú de navegación */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  nav ul.active {
+    display: block; /* Mostrar el menú cuando tenga la clase active */
+  }
+}
+
+/* For large screens (1025px and up) */
+@media (min-width: 1025px) {
+  .temple-gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #menu {
+    display: none;  /* Ocultar el botón en pantallas grandes */
+  }
+}
+
+
+
