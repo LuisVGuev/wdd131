@@ -1,0 +1,54 @@
+/* Estilos específicos para móviles (pantallas menores a 600px) */
+@media screen and (max-width: 600px) {
+    form {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    header {
+        font-size: 18px; /* Ajusta el tamaño de fuente del header para pantallas pequeñas */
+        padding: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 10px; /* Reduce el margen en pantallas pequeñas */
+    }
+
+    label {
+        font-size: 14px; /* Ajusta el tamaño de la fuente de las etiquetas */
+    }
+
+    input, select, textarea {
+        font-size: 14px; /* Ajusta el tamaño de la fuente de los campos de entrada */
+    }
+
+    button {
+        padding: 12px 15px;
+    }
+
+    .rating {
+        width: 100%; /* Asegura que las estrellas de calificación ocupen el 100% en pantallas pequeñas */
+        flex-direction: column; /* Coloca las estrellas de calificación en una columna */
+    }
+
+    .rating input {
+        margin-right: 0; /* Elimina el margen derecho de las estrellas en pantallas pequeñas */
+        margin-bottom: 5px; /* Añade un poco de espacio entre las estrellas */
+    }
+
+    /* Estiliza los checkboxes para pantallas pequeñas */
+    .form-group label input[type="checkbox"] {
+        margin-right: 8px;
+        vertical-align: middle;
+    }
+
+    .form-group {
+        display: block; /* Asegura que los checkboxes estén en una sola columna */
+        gap: 10px;
+    }
+
+    footer {
+        font-size: 14px; /* Ajusta el tamaño del texto del footer */
+        padding: 10px;
+    }
+}

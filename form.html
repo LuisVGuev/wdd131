@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/form-large.css" media="screen and (max-width: 600px)">
+    <script src="scripts/form.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>Product Review Form</h1>
+    </header>
+    
+    <div class="form-container">
+        <form id="review-form" action="review.html" method="get">
+            <div class="form-group">
+                <label for="product">Product Name</label>
+                <select id="product" name="product" required>
+                    <option value="" disabled selected>Select a Product ...</option>
+                </select>
+            </div>
+    
+            <div class="form-group">
+                <label>Overall Rating</label>
+                <div class="rating">
+                    <!-- Radio buttons for rating -->
+                    <input type="radio" id="rating-1" name="rating" value="1" required><label for="rating-1">☆</label>
+                    <input type="radio" id="rating-2" name="rating" value="2"><label for="rating-2">☆☆</label>
+                    <input type="radio" id="rating-3" name="rating" value="3"><label for="rating-3">☆☆☆</label>
+                    <input type="radio" id="rating-4" name="rating" value="4"><label for="rating-4">☆☆☆☆</label>
+                    <input type="radio" id="rating-5" name="rating" value="5"><label for="rating-5">☆☆☆☆☆</label>
+                </div>
+            </div><br>
+    
+            <div class="form-group">
+                <label for="installation-date">Date of Installation</label>
+                <input type="date" id="installation-date" name="installation-date" required>
+            </div><br>
+    
+            <div class="form-group">
+                <label>Useful Features</label>
+                <label><input type="checkbox" name="features" value="feature1"> Durability</label>
+                <label><input type="checkbox" name="features" value="feature2"> Ease of use</label>
+                <label><input type="checkbox" name="features" value="feature3"> Performance</label>
+                <label><input type="checkbox" name="features" value="feature3"> Design</label><br>
+            </div>
+    
+            <div class="form-group">
+                <label for="review">Written Review</label>
+                <textarea id="review" name="review"></textarea>
+            </div>
+    
+            <div class="form-group">
+                <label for="username">User Name</label>
+                <input type="text" id="username" name="username">
+            </div>
+    
+            <button type="submit">Submit Review</button>
+        </form>
+    </div> <!-- Cierre correctamente el div .form-container -->
+    
+   
+    <footer aria-label="Footer section">
+        <p>&copy; 2025 Product Reviews</p>
+        <p>&copy; <span id="currentyear"></span> Luis Ramon Veliz, Brasil</p>
+        <p id="lastModified"></p>
+    </footer>
+    <script src="form.js"></script>
+</body>
+</html>
