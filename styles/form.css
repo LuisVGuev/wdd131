@@ -1,3 +1,4 @@
+/* form.css*/
 :root {
     --primary-color: #2f4796;
     --secondary-color: #a7bbe6;
@@ -82,7 +83,7 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
-    margin-top: auto; /* Esto hace que el footer se pegue al final de la página */
+    margin-top: auto;
 }
 
 /* Media query for responsive design */
@@ -105,17 +106,17 @@ footer {
     margin-right: 5px;
 }
 
-/* Align checkboxes vertically with proper spacing */
+/* Align checkboxes */
 .form-group label input[type="checkbox"] {
-    margin-right: 8px; /* Space between checkbox and label text */
-    vertical-align: middle; /* Alinea verticalmente los checkboxes con el texto */
+    margin-right: 8px; 
+    vertical-align: middle;  
 }
 
 /* Styling for checkboxes list */
 .form-group {
     display: flex;
-    flex-wrap: wrap; /* Permite que los checkboxes se distribuyan en varias líneas */
-    gap: 10px; /* Espacio entre los checkboxes */
+    flex-wrap: wrap; 
+    gap: 10px; 
 }
 
 /* Ensuring labels and inputs have adequate space */
@@ -127,10 +128,9 @@ input[type="checkbox"], input[type="radio"] {
 label {
     display: inline-flex;
     align-items: center;
-    margin-right: 15px; /* Añade espacio entre los checkboxes */
+    margin-right: 15px; 
 }
 
 .form-group label:last-child {
-    margin-right: 0; /* El último label no tiene margen derecho */
+    margin-right: 0;
 }
-
