@@ -10,9 +10,7 @@ if (!reviewCount) {
     reviewCount = parseInt(reviewCount);
 }
 
-// Update the review count on the page
-document.getElementById("review-count").textContent = reviewCount;
-
-// Increment the review count and store it in localStorage
-reviewCount++;
-localStorage.setItem("reviewCount", reviewCount);
+document.getElementById("review-form").addEventListener("submit", function() {
+    reviewCount++;
+    localStorage.setItem("reviewCount", reviewCount); 
+});
